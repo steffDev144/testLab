@@ -1,0 +1,33 @@
+.work {
+    padding: 80px 0;
+    &__title {
+        text-align: center;
+    }
+    &__list {
+        list-style-type: none;
+        margin-top: 61px;
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        &_item {
+            &-img {
+                width: 72px;
+                height: 72px;
+                svg {
+                    width: inherit;
+                    height: inherit;
+                    object-fit: cover;
+                }
+            }
+            &-title {
+                margin-top: 16px;
+            }
+            &-descr {
+                margin-top: 4px;
+                font-size: 14px;
+                line-height: 171%;
+                color: $dark-gray;
+            }
+        }
+    }
+}

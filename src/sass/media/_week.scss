@@ -1,0 +1,31 @@
+@media(max-width: 1200px) {
+    .week {
+        &__wrap {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media(max-width: 768px) {
+    .week {
+        padding-bottom: 56px;
+    }
+}
+@media(max-width: 600px) {
+    .week {
+        &__wrap {
+            grid-template-columns: 1fr;
+        }
+        &__content {
+            grid-row-start: 2;
+        }
+    }
+}
+@media(max-width: 375px) {
+    .week {
+        &__content {
+            &_title, &_descr {
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.main {
+    height: 100vh;
+    background: url('../img/main.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    &__wrap {
+        max-width: 748px;
+        margin: 0 auto;
+    }
+    &__title {
+        color: $white;
+        text-align: center;
+    }
+    &__descr {
+        font-size: 18px;
+        line-height: 178%;
+        text-align: center;
+        color: $white;
+        margin-top: 18px;
+    }
+    &__btn {
+        border-radius: 4px;
+        padding: 20px 40px;
+        background: $light-gray;
+        border: 1px solid $light-gray;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        display: block;
+        margin: 92px auto 0;
+
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        text-align: center;
+        color: $black;
+
+        &:hover {
+            background-color: $white;
+        }
+    }
+}

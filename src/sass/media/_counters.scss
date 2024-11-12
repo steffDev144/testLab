@@ -1,0 +1,9 @@
+@media(max-width: 768px) {
+    .counters {
+        padding: 20px 0 32px;
+        &__list {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+    }
+}

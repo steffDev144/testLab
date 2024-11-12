@@ -1,0 +1,128 @@
+@import './var/variables';
+
+@font-face {
+    font-family: "GraphikLCG";
+    src:
+      url("../fonts/GraphikLCG-Regular.eot") format("eot"),
+      url("../fonts/GraphikLCG-Regular.ttf") format("ttf"),
+      url("../fonts/GraphikLCG-Regular.woff") format("woff"),
+      url("../fonts/GraphikLCG-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "GraphikLCG";
+    src:
+      url("../fonts/GraphikLCG-Semibold.eot") format("eot"),
+      url("../fonts/GraphikLCG-Semibold.ttf") format("ttf"),
+      url("../fonts/GraphikLCG-Semibold.woff") format("woff"),
+      url("../fonts/GraphikLCG-Semibold.woff2") format("woff2");
+    font-weight: 600;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "GraphikLCG", sans-serif;
+    font-weight: normal;
+}
+
+.container {
+    display: block;
+    width: 1216px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 123%;
+    color: $black;
+}
+h2 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 140%;
+    color: $black;
+}
+h3 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 125%;
+    color: $black;
+}
+h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    color: $black;
+}
+h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: $black;
+}
+h6 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: $black;
+}
+
+.footer {
+    padding: 28px 0;
+    border-top: 1px solid $light-gray;
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 178%;
+        text-align: center;
+        color: $black;
+    }
+}
+
+@media(max-width: 1440px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media(max-width: 768px) {
+    h1 {
+        font-size: 32px;
+        line-height: 125%;
+    }
+    h3 {
+        font-size: 20px;
+        line-height: 120%;
+    }
+}
+@media(max-width: 375px) {
+    h1 {
+        font-size: 24px;
+        line-height: 133%;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 133%;
+    }
+}
+
+@import './blocks/header';
+@import './blocks/main';
+@import './blocks/work';
+@import './blocks/week';
+@import './blocks/rewiews';
+@import './blocks/answer';
+@import './blocks/counters';
+@import './blocks/form';
+
+@import './media/header';
+@import './media/main';
+@import './media/work';
+@import './media/week';
+@import './media/rewiews';
+@import './media/answer';
+@import './media/counters';

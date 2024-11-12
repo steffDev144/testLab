@@ -1,0 +1,25 @@
+@media(max-width: 768px) {
+    .main {
+        &__descr {
+            font-size: 16px;
+            line-height: 175%;
+            margin-top: 17px;
+        }
+        &__btn {
+            margin-top: 40px;
+        }
+        &__wrap {
+            max-width: 476px;
+        }
+    }
+}
+@media(max-width: 375px) {
+    .main {
+        &__wrap {
+            max-width: 288px;
+        }
+        &__btn {
+            margin-top: 26px;
+        }
+    }
+}

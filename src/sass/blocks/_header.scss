@@ -1,0 +1,97 @@
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 20px;
+        padding: 26px 0;
+    }
+    &__menu {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+        &_item {
+            a {
+                font-size: 16px;
+                line-height: 175%;
+                color: $white;
+                text-decoration: none;
+                transition: all .3s ease-in-out;
+                &:hover {
+                    text-decoration: underline;
+                    text-decoration-skip-ink: none
+                }
+            }
+        }
+    }
+    &__burger {
+        width: 62px;
+        height: 62px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        display: none;
+    }
+}
+.mobile {
+    position: fixed;
+    padding: 28px 16px;
+    transition: all .3s ease-in-out;
+    top: 0;
+    z-index: 99;
+    left: -100%;
+    background: $white;
+    height: 100vh;
+    width: 100%;
+    max-width: 375px;
+    &.active {
+        left: 0;
+    }
+    &__head {
+        display: flex;
+        padding-bottom: 28px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $light-gray;
+    }
+    &__close {
+        cursor: pointer;
+        position: relative;
+        width: 22px;
+        height: 22px;
+        span {
+            position: absolute;
+            width: 22px;
+            top: 50%;
+            display: block;
+            height: 2px;
+            background: $black;
+            transform: rotate(-45deg);
+            &:last-of-type {
+                transform: rotate(45deg);
+            }
+        }
+    }
+    &__list {
+        list-style-type: none;
+        &_item {
+            padding: 16px 0;
+            border-bottom: 1px solid $light-gray;
+            a {
+                font-size: 18px;
+                line-height: 178%;
+                color: $gray;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+}

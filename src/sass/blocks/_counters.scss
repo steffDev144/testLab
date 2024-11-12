@@ -1,0 +1,25 @@
+.counters {
+    padding: 68px 0;
+    background-color: $extralight-gray;
+    &__list {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 32px;
+        row-gap: 37px;
+    }
+    &__item {
+        &_title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 178%;
+            color: $black;
+        } 
+        &_descr {
+            margin-top: 17px;
+            font-size: 16px;
+            line-height: 175%;
+            color: $black;
+        }
+    }
+}

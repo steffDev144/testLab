@@ -1,0 +1,143 @@
+.form {
+    padding: 80px 0;
+    form {
+        margin-top: 44px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 32px;
+    }
+    &__title {
+        text-align: center;
+    }
+    &__input {
+        border: 2px solid $extralight-gray;
+        background-color: $extralight-gray;
+        border-radius: 4px;
+        width: 100%;
+        padding: 16px 51px 16px 16px;
+        outline: none;
+
+        font-size: 18px;
+        line-height: 178%;
+        color: $black;
+    }
+    &__label {
+        position: relative;
+        cursor: pointer;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        input {
+            display: none;
+        }
+        span {
+            border: 2px solid $mid-grey;
+            border-radius: 4px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s ease-in-out;
+        }
+        input:checked + span {
+            background-color: $primary;
+            border-color: $primary;
+        }
+    }
+    &__labels {
+        position: relative;
+        span.label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all .3s ease-in-out;
+            left: 16px;
+            font-size: 18px;
+            line-height: 178%;
+            color: $dark-gray;
+        }
+        span.error, span.success {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            transition: all .3s ease-in-out;
+            z-index: -1;
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+        }
+        span.error-text {
+            position: absolute;
+            left: 0;
+            bottom: -21px;
+            color: $dangerous;
+            font-size: 12px;
+            line-height: 133%;
+            transition: all .3s ease-in-out;
+            z-index: -1;
+            opacity: 0;
+        }
+        &.active {
+            span.label {
+                transform: unset;
+                font-size: 14px;
+                line-height: 171%;
+                top: 8px;
+                color: $gray;
+            }
+            input {
+                padding-bottom: 4px;
+                padding-top: 28px;
+            }
+        }
+        &.error {
+            span.error, span.error-text {
+                z-index: 10;
+                opacity: 1;
+            }
+            input {
+                border-color: $dangerous;
+            }
+        }
+        &.success {
+            span.success {
+                z-index: 10;
+                opacity: 1;
+            }
+            input {
+                border-color: $extralight-gray;
+            }
+        }
+    }
+    &__btn {
+        border-radius: 4px;
+        padding: 20px 40px;
+        width: 100%;
+        background: $primary;
+        border: none;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        text-align: center;
+        color: $white;
+
+        &:hover {
+            background: $primary-hover;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .form {
+        padding: 56px 0;
+        form {
+            grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+        }
+    }
+}
